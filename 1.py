@@ -4,7 +4,7 @@ print("Hello World!")
 '''
 # 이것도 주석입니다.
 
-print("Hello", "python", 1, 2, "abcedf", sep="\n") #sep=" " 이걸로 출력 방식을 바꿀 수 있다.
+print("Hello", "python", 1, 2, "abcedf", sep=" ") #sep=" " 이걸로 출력 방식을 바꿀 수 있다.
 print() #줄바꿈
 print("hello")
 print("안녕하세요", end="\n") #end="" 끝부분 규칙
