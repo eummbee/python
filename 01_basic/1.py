@@ -1,4 +1,3 @@
-# python 기초
 # 아래도 주석이고,
 '''
 print("Hello World!")
