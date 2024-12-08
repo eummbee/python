@@ -155,19 +155,39 @@ print(solution("3141592","271"))
 
 
 #https://school.programmers.co.kr/learn/courses/30/lessons/181919
-#프로그래머스 문제7
+#프로그래머스 문제7-콜라츠 수열
 def solution(n):
     answer=[]
-    if n % 2 == 0:
-        answer.append(n/2)
-    elif n % 2 == 1:
-        answer.append(3*solution(n-1)+1)
-    else:
-        answer.append(1)
+    answer.append(n)
+    while n>1:
+        if n%2==0:
+            n = n/2
+        else:
+            n = 3*n+1
+        answer.append(n)
     return answer
+print(solution(6))
 
-print(solution(16))
-#10,5,16,8,4,2,1
+##7-재귀함수 버전
+answer=[]
+
+def solution(n):
+    if n==1:
+        answer.append(n)
+
+    elif n%2==0:
+        answer.append(n)
+        solution(n/2) #재귀함수로 인해 다시 함수가 반복되기 때문에 answer=[]리스트는 함수 바깥에서 정의해야한다.
+        
+    else:
+        answer.append(n)
+        solution(n*3+1)
+        
+    return answer
+            
+print(solution(10))
+
+
 
     
 
