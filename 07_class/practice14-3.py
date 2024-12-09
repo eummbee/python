@@ -27,3 +27,6 @@ employee = [
 ]
 for i in employee:
     print(i)
+
+#다른방법
+print("\n".join(map(str, employee)))
