@@ -187,6 +187,22 @@ def solution(n):
             
 print(solution(10))
 
+###리더님 버전
+def solution(n):
+    answer = []
+
+    def collat(x):
+        answer.append(x)
+        if x == 1:
+            return 1
+        elif x%2==0:
+            collat(x/2)
+        else:
+            collat(x*3+1)
+    collat(n)
+    return answer
+print(solution(1))
+
 
 
     
